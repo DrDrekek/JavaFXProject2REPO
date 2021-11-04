@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ExerciseB.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="554.0" prefWidth="906.0">
+         <children>
+            <TextField fx:id="setStrokeWidth" layoutX="163.0" layoutY="287.0" onAction="#getShapeChoice" prefHeight="30.0" prefWidth="135.0" />
+            <Text layoutX="69.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stroke Width :" wrappingWidth="91.0" />
+            <Text layoutX="96.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shapes: " />
+            <Text layoutX="78.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Color:" />
+            <RadioButton fx:id="btnRed" layoutX="155.0" layoutY="229.0" mnemonicParsing="false" onAction="#setColor" prefHeight="20.0" prefWidth="85.0" text="Red" >
+               <toggleGroup>
+               <ToggleGroup fx:id="ColorChoiceGroup" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="btnGreen" layoutX="230.0" layoutY="229.0" mnemonicParsing="false" onAction="#setColor" prefHeight="20.0" prefWidth="85.0" text="Green" toggleGroup="$ColorChoiceGroup" />
+            <RadioButton fx:id="btnBlue" layoutX="323.0" layoutY="229.0" mnemonicParsing="false" onAction="#setColor" prefHeight="20.0" prefWidth="85.0" text="Blue" toggleGroup="$ColorChoiceGroup" />
+            <CheckBox fx:id="check_box" layoutX="147.0" layoutY="337.0" mnemonicParsing="false" onAction="#setBackGround" text="Add Background?" />
+            <VBox fx:id="v_box" layoutX="436.0" layoutY="4.0" onMouseClicked="#mouseClick" prefHeight="543.0" prefWidth="461.0" spacing="50.0">
+               <children>
+                  <Circle fx:id="circle_1" fill="#ff821f" radius="58.0" stroke="BLACK" strokeType="INSIDE" />
+                  <Rectangle fx:id="rectangle_1" arcHeight="5.0" arcWidth="5.0" fill="#ff1f4e" height="107.0" stroke="BLACK" strokeType="INSIDE" width="173.0" />
+                  <Rectangle fx:id="rectangle_square" arcHeight="5.0" arcWidth="5.0" fill="#1fe1ff" height="107.0" stroke="BLACK" strokeType="INSIDE" width="107.0" />
+               </children>
+               <padding>
+                  <Insets bottom="50.0" left="160.0" top="50.0" />
+               </padding>
+            </VBox>
+            <ComboBox fx:id="combo_box" layoutX="155.0" layoutY="180.0" onAction="#getShapeChoice" prefHeight="30.0" prefWidth="173.0" promptText="Select the shape" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
